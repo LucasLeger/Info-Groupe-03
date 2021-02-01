@@ -29,14 +29,17 @@
    <!-- Modernizer for Portfolio -->
    <script src="js/modernizer.js"></script>
    <!-- [if lt IE 9] -->
+   <script src="js/duplicate.js"></script>
    </head>
    <body>
-       <form action="duplicate.js" method="post">
+       <form action="" method="post">
+           <div id="div">
+               <input name="password1" placeholder="123"/>
+           </div>
            
-        <button id="button" onclick="duplicate()">Click me</button>
-        <div id="duplicater"> 
-            duplicate EVERYTHING INSIDE THIS DIV
-        </div>
+           
+           
+           <button onclick="duplicate()">Click me</button>
            
        </form>
    </body>
