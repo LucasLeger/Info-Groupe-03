@@ -8,15 +8,15 @@
 .code{
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-flow: column wrap;
     align-items: center;
-}
 
-.plus{
+.plaus{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    order: 1;
 }
 
 .form{
