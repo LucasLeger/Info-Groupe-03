@@ -1,0 +1,13 @@
+/******************************************
+    File Name: alignment.css
+/****************************************** */
+
+/*Ces styles ne sont là que pour la présentation*/
+
+
+.code{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
