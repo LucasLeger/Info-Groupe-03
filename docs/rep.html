@@ -26,24 +26,32 @@
    <link rel="stylesheet" href="css/responsive.css">
    <!-- Custom CSS -->
    <link rel="stylesheet" href="css/custom.css">
+   <!-- Alignment CSS -->
+   <link rel="stylesheet" href="css/alignment.css">
    <!-- Modernizer for Portfolio -->
    <script src="js/modernizer.js"></script>
    <!-- [if lt IE 9] -->
    <script src="js/main.js"></script>
    </head>
    <body>
-       <form action="php/traitement.php" method="post">
-            <div id="div">
-                <input type="password" name="code" placeholder="Entrez un code" required>
-            </div>
-           
-           
-           <!--bouton relié au form-->
-           <button type="submit">form</button>
-   
-       </form>
-       <!--bouton d'ajout-->
-       <button onclick="addInput()">Click me</button>
+            <form action="php/traitement.php" method="post">
+                <div class="code" >
+                    <div id="div">
+                        <input type="password" name="code" placeholder="Entrez un code" required>
+                    </div> 
+                </div>
+                <div class="form">
+                    <!--bouton relié au form-->
+                    <button type="submit">form</button>
+                </div>
+                
+            </form>
 
-       <div id="test"></div>
+            <div class="plus">
+                <!--bouton d'ajout-->
+                <button onclick="addInput()">+</button>
+            </div>
+            
+            <div id="test"></div>
+       
    </body>
