@@ -5,7 +5,7 @@ function connectBDD() {
     $port = '3306';
     $db = 'sqirl_g348h';
     $login = 'sqirl';
-    $password = 'spaqssiworrdl';
+    $password = '';
 
     try {
         $pdo = new PDO('mysql:host='.$host.';port='.$port. ';dbname='.$db, $login, $password);
