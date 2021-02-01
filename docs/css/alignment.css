@@ -4,23 +4,32 @@
 
 /*Ces styles ne sont là que pour la présentation*/
 
+#boite{
+    display: block;
+    align-items: center;
 
+}
+
+#div{
+    display: block;
+    justify-content: center;
+
+}
 .code{
     display: flex;
     justify-content: center;
-    flex-flow: column wrap;
-    align-items: center;
-
-.plaus{
+    
+}
+/*.plaus{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     order: 1;
-}
+}*/
 
-.form{
+/*.form{
     display: flex;
     align-items: flex-end;
     justify-content: center;
-}
+}*/

@@ -37,8 +37,12 @@
             <form action="php/traitement.php" method="post">
                 <div class="code" >
                     <div id="div">
-                        <input type="password" name="code" placeholder="Entrez un code" required>
+                        <input id="boite" type="password" name="code" placeholder="Entrez un code" required>
                     </div> 
+                    <div class="plus">
+                        <!--bouton d'ajout-->
+                        <button onclick="addInput()">+</button>
+                    </div>
                 </div>
                 <div class="form">
                     <!--bouton relié au form-->
@@ -47,10 +51,7 @@
                 
             </form>
 
-            <div class="plus">
-                <!--bouton d'ajout-->
-                <button onclick="addInput()">+</button>
-            </div>
+            
             
             <div id="test"></div>
        
