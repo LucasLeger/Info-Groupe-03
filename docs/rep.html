@@ -29,19 +29,21 @@
    <!-- Modernizer for Portfolio -->
    <script src="js/modernizer.js"></script>
    <!-- [if lt IE 9] -->
-   <script src="js/duplicate.js"></script>
+   <script src="js/main.js"></script>
    </head>
    <body>
        <form action="" method="post">
-           <div id="div">
-               <input name="password1" placeholder="123"/>
-           </div>
+            <div id="div">
+                <input type="password" name="code" placeholder="Entrez un code" required>
+            </div>
            
            
            <!--bouton relié au form-->
-           <button>form</button>
+           
        </form>
-       
+       <button>form</button>
        <!--bouton d'ajout-->
-       <button onclick="duplicate()">Click me</button>
+       <button onclick="addInput()">Click me</button>
+
+       <div id="test"></div>
    </body>
