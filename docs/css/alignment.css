@@ -6,19 +6,10 @@
 
 #boite{
     display: block;
-    align-items: center;
-
-}
-
-#div{
-    display: block;
-    justify-content: center;
-
 }
 .code{
     display: flex;
     justify-content: center;
-    
 }
 /*.plaus{
     display: flex;
