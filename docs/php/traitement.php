@@ -1,6 +1,6 @@
 <?php
 
-include "connectBDD.php";
+include "connect/connectBDD.php";
 
 function check($POST){
 
