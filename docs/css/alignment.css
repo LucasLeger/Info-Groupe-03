@@ -2,7 +2,7 @@
     File Name: alignment.css
 /****************************************** */
 
-#boite{
+.boite{
     display: block;
     transition-duration: 2000ms;
     border-radius: 8px;

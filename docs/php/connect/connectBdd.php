@@ -5,7 +5,7 @@ function connectBDD() {
     $port = '3306';
     $db = 'sqirl_g348h';
     $login = 'sqirl';
-    $password = '';
+    $password = 'spaqssiworrdl';
 
     try {
         $pdo = new PDO('mysql:host='.$host.';port='.$port. ';dbname='.$db, $login, $password);
@@ -15,5 +15,8 @@ function connectBDD() {
         var_dump($e->getMessage());
     }
     return $pdo;
-}
+};
 
+function finalfunction() {
+    return "bonjour3";
+}

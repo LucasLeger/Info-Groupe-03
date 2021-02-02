@@ -36,17 +36,17 @@
    <script src="js/main.js"></script>
    </head>
    <body>
-            <form action="php/traitement.php" method="post">
+            <form action="php/connect/save.php" method="post">
                 <div class="code" >
                     <div id="div">
-                        <input id="boite" type="password" name="code" placeholder="Entrez un code" required>
+                        <input class="boite" type="password" name="code0" placeholder="Entrez un code" required>
                     </div>
                         <!--bouton d'ajout-->
                         <button type="button" onclick="addInput()">+</button>
                 </div>
                 <div class="form">
                     <!--bouton relié au form-->
-                    <button type="submit">form</button>
+                    <button type="submit">Valider</button>
                 </div>
                 
             </form>

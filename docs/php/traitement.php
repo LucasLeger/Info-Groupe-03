@@ -1,34 +1,51 @@
 <?php
 
-include "connect/connectBDD.php";
+include "connect/connectBdd.php";
 
-function check($POST){
-
+if(!empty($_POST)){
+    
     $pdo = connectBDD();
-
     $maxRows = $pdo->query("SELECT 'is_in' FROM data WHERE data.is_in = 1");
     $maxRows = $maxRows->rowCount();
 
     $alreadyIn = array();
 
-    foreach ($POST as $value){
+    $finalCode = $_POST["code"];
+    echo sizeof($_POST);
+    for($ii = 0; $ii < sizeof($_POST); $ii++){
+        $currentcode = "code".$ii;
+        $currentcode = $_POST[$currentcode];
+       
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
-        $row = $rowPrepare->execute(array($value));
+        $row = $rowPrepare->execute(array($currentcode));
         
-        if($row->rowCount() != 0 && !array_search($value, $alreadyIn)){
-            array_push($alreadyIn, $value);
+       // $rowCount = $row->rowCount();
+        if(1 != 0){
+            if(in_array($currentcode, $alreadyIn) == false){
+                //array_push($alreadyIn, $currentcode);
+                echo $currentcode;
+            }
         }
     }
-    
 
+/*
+    
+    $finalCode = "";
     if(sizeof($alreadyIn) == $maxRows){
         $finalCode = $pdo->query("SELECT 'data' FROM data WHERE data.is_in = 2");
         $finalCode = $finalCode->fetch();
         $finalCode = $finalCode['data'];
-
-        echo $finalCode;
+    } else {
+        $finalCode = $mawRows - sizeof($alreadyIn);
+        $finalCode = "Il vous manque ".$finalCode." code(s)";
     }
-
+*/
 }
 
-check($_POST);
+
+
+/*
+$finalCode = finalfunction();
+
+header('Location: ../rep.php?r='.$finalCode);
+*/
