@@ -2,7 +2,8 @@
 
 include "connect/config.php";
 
-
+if(!empty($_POST)){
+    
     $pdo = connectBDD();
 
     $maxRows = $pdo->query("SELECT 'is_in' FROM data WHERE data.is_in = 1");
@@ -29,5 +30,5 @@ include "connect/config.php";
         $finalCode = "Il vous manque ".$finalCode." code(s)";
     }
 
-
+}
 header('Location: rep.php?r='.$finalCode);
