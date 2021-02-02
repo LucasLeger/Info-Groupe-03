@@ -2,7 +2,8 @@
 
 include "connect/config.php";
 
-
+if(!empty($_POST)){
+    
     $pdo = connectBDD();
 
     $maxRows = $pdo->query("SELECT 'is_in' FROM data WHERE data.is_in = 1");
@@ -14,7 +15,7 @@ include "connect/config.php";
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($value));
         
-        if($row->rowCount() != 0 && !array_search($value, $alreadyIn)){
+        if($row->rowCount() != 0 && in_array($value, $alreadyIn) == false){
             array_push($alreadyIn, $value);
         }
     }
@@ -29,5 +30,5 @@ include "connect/config.php";
         $finalCode = "Il vous manque ".$finalCode." code(s)";
     }
 
-
+}
 header('Location: rep.php?r='.$finalCode);
