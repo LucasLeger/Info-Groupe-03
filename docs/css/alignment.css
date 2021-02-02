@@ -13,6 +13,7 @@
 
 }
 
+
 .code{
     display: flex;
     justify-content: center;
@@ -33,17 +34,4 @@ body {
     background-size: 2450px;
 }
 
-@media (min-width: 1090px){
-    #boite{
-        padding: 50px 50px; 
-        
-    }
-
-}
-
-@media (max-width: 380px){
-    #boite{
-        padding: 30px 20px
-    }
-}
 
