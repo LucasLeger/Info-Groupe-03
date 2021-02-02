@@ -11,7 +11,7 @@ if(!empty($_POST)){
     $alreadyIn = array();
 $finalCode = 0;
 
-    $finalCode = sizeof($_POST);
+    $finalCode = $_POST["code"];
 
     foreach ($_POST as $value){
         
