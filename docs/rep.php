@@ -54,9 +54,5 @@
             
             
             <div><?php if(isset($_GET['r'])){echo $_GET['r'];};?></div>
-
-            <div>
-                <p>Si vous avez récupéré nos 8 mots de passe, envoyez un message à Lucas LEGER ou Sébastien Plottu sur Teams.<br>Le formulaire n'est pas encore fonctionnel à 100%</p>
-            </div>
        
    </body>
