@@ -11,7 +11,6 @@ if(!empty($_POST)){
     $alreadyIn = array();
 
     $finalCode = $_POST["code"];
-    echo sizeof($_POST);
     for($ii = 0; $ii < sizeof($_POST); $ii++){
         $currentcode = "code".$ii;
         $currentcode = $_POST[$currentcode];
