@@ -19,17 +19,12 @@ if(!empty($_POST)){
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($currentcode));
         
-        /*
-        if($row->rowCount() != 0){
+        $rowCount = $row->rowCount();
+        if($rowCount != 0){
             if(in_array($currentcode, $alreadyIn) == false){
                 array_push($alreadyIn, $currentcode);
             }
         }
-        echo $alreadyIn[1];
-        */
-        echo $row;
-        echo $currentcode;
-            //$finalCode++;
     }
 
     
