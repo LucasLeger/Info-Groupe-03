@@ -22,3 +22,10 @@
     align-items: flex-end;
     justify-content: center;
 }
+
+body {
+    background-image:url(https://data2.1freewallpapers.com/download/question-marks-figures-3d.jpg);
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: 100%;
+}
