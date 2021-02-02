@@ -33,4 +33,6 @@ if(!empty($_POST)){
 }
 header('Location: rep.php?r='.$finalCode);*/
 
-echo "Bonjour test";
+$finalCode = "bonjour";
+
+header('Location: rep.php?r='.$finalCode);
