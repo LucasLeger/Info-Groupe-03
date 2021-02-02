@@ -1,7 +1,7 @@
 <?php
 
 include "connect/config.php";
-
+/*
 if(!empty($_POST)){
     
     $pdo = connectBDD();
@@ -31,4 +31,6 @@ if(!empty($_POST)){
     }
 
 }
-header('Location: rep.php?r='.$finalCode);
+header('Location: rep.php?r='.$finalCode);*/
+
+echo "Bonjour test";
