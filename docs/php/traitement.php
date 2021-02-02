@@ -21,7 +21,7 @@ if(!empty($_POST)){
         
         $rowCount = $row->rowCount();
         if($rowCount != 0){
-            if(in_array($currentcode, $alreadyIn) == false){
+            if(false == false){
                 //array_push($alreadyIn, $currentcode);
                 echo $currentcode;
             }
