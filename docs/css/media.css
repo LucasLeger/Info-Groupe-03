@@ -7,3 +7,16 @@
         background-color: rgb(32, 32, 32);
   }
 }
+@media (min-width: 1090px){
+    #boite{
+        padding: 50px 50px; 
+        
+    }
+
+}
+
+@media (max-width: 380px){
+    #boite{
+        padding: 30px 20px;
+    }
+}
