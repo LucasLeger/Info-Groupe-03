@@ -2,8 +2,8 @@
     File Name: media.css
 /****************************************** */
 
-@media screen and (max-height: 780px){
+@media screen and (min-height: 394px){
     body{
-        background-color: rgb(32, 32, 32);
+        background-image:url(https://data2.1freewallpapers.com/download/question-marks-figures-3d.jpg);
   }
 }
