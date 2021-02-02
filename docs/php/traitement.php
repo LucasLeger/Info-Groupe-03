@@ -19,17 +19,15 @@ if(!empty($_POST)){
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($currentcode));
         
-       // $rowCount = $row->rowCount();
-        if(1 != 0){
+        $rowCount = $row->rowCount();
+        if($rowCount != 0){
             if(in_array($currentcode, $alreadyIn) == false){
-                //array_push($alreadyIn, $currentcode);
-                echo $currentcode;
+                array_push($alreadyIn, $currentcode);
+
             }
         }
     }
 
-/*
-    
     $finalCode = "";
     if(sizeof($alreadyIn) == $maxRows){
         $finalCode = $pdo->query("SELECT 'data' FROM data WHERE data.is_in = 2");
@@ -39,13 +37,8 @@ if(!empty($_POST)){
         $finalCode = $mawRows - sizeof($alreadyIn);
         $finalCode = "Il vous manque ".$finalCode." code(s)";
     }
-*/
+
 }
 
-
-
-/*
-$finalCode = finalfunction();
-
 header('Location: ../rep.php?r='.$finalCode);
-*/
+
