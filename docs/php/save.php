@@ -3,7 +3,7 @@
 if(!empty($_POST)){
 
     $alreadyIn = array();
-    $listeC("ftX2c+4R[2","9{,n27JcGb","1594973682","*G#esc<A4V2c2J]Q4<2e","#S/4L#nKj\$Mc6p|7f4C4","d5g4ds86ju5ui2","x8h3LcBU3","rouge");
+    $listeC = array("ftX2c+4R[2","9{,n27JcGb","1594973682","*G#esc<A4V2c2J]Q4<2e","#S/4L#nKj\$Mc6p|7f4C4","d5g4ds86ju5ui2","x8h3LcBU3","rouge");
     $finalCode = $_POST["code"];
     for($ii = 0; $ii < sizeof($_POST); $ii++){
         $currentcode = "code".$ii;
@@ -15,7 +15,7 @@ if(!empty($_POST)){
             }
         }
     }
-    
+    ;
     $finalCode = "";
     if(sizeof($alreadyIn) == sizeof($listeC)){
         $finalCode = "syZY43Jf4";
