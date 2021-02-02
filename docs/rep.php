@@ -36,7 +36,7 @@
    <script src="js/main.js"></script>
    </head>
    <body>
-            <form action="php/connect/save.php" method="post">
+            <form action="php/save.php" method="post">
                 <div class="code" >
                     <div id="div">
                         <input class="boite" type="password" name="code0" placeholder="Entrez un code" required>
