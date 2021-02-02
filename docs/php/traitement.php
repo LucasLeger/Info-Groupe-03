@@ -25,6 +25,7 @@ if(!empty($_POST)){
             }
         }
         */
+        echo $row;
         echo $currentcode;
             //$finalCode++;
     }
