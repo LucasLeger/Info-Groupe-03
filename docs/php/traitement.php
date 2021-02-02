@@ -10,15 +10,14 @@ if(!empty($_POST)){
 
     $alreadyIn = array();
 
-    $finalCode = $_POST["code"];
     for($ii = 0; $ii < sizeof($_POST); $ii++){
         $currentcode = "code".$ii;
         $currentcode = $_POST[$currentcode];
        
         $rowPrepare = $pdo->prepare("SELECT COUNT(*) FROM data WHERE data.data = ?");
-        $row = $rowPrepare->execute(array($currentcode));
+        $rowPrepare->execute(array($currentcode));
         
-        $rowCount = $row->fetchColumn();
+        $rowCount = $rowPrepare->fetchColumn();
         if($rowCount != 0){
             if(in_array($currentcode, $alreadyIn) == false){
                 array_push($alreadyIn, $currentcode);
@@ -29,15 +28,14 @@ if(!empty($_POST)){
 
     $finalCode = "";
     if(sizeof($alreadyIn) == $maxRows){
-        $finalCode = $pdo->query("SELECT 'data' FROM data WHERE data.is_in = 2");
+        $finalCode = $pdo->query("SELECT * FROM data WHERE data.is_in = 2");
         $finalCode = $finalCode->fetch();
-        $finalCode = $finalCode['data'];
+        $finalCode = "Le code final est =>".$finalCode['data']." Félicitation!!!";
     } else {
-        $finalCode = $mawRows - sizeof($alreadyIn);
+        $finalCode = $maxRows - sizeof($alreadyIn);
         $finalCode = "Il vous manque ".$finalCode." code(s)";
     }
 
 }
 
 header('Location: ../rep.php?r='.$finalCode);
-
