@@ -35,4 +35,4 @@ header('Location: rep.php?r='.$finalCode);*/
 
 $finalCode = "bonjour";
 
-header('Location: rep.php?r='.$finalCode);
+header('Location: ../rep.php?r='.$finalCode);
