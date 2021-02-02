@@ -5,8 +5,8 @@ include "connect/connectBdd.php";
 if(!empty($_POST)){
     
     $pdo = connectBDD();
-
-    $finalCode = "bonjour4";
+    $maxRows = $pdo->query("SELECT 'is_in' FROM data WHERE data.is_in = 1");
+    $finalCode = $maxRows->rowCount();
 
     header('Location: ../rep.php?r='.$finalCode);
 /*
