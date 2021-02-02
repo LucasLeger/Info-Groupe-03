@@ -1,6 +1,6 @@
 <?php
 
-include "connect/config.php";
+include "connect/connectBdd.php";
 /*
 if(!empty($_POST)){
     
