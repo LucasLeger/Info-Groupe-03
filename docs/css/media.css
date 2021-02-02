@@ -7,7 +7,7 @@
         background-image:url(https://data2.1freewallpapers.com/download/question-marks-figures-3d.jpg);
   }
 }
-@media (min-width: 1090px){
+@media (max-width: 1920px){
     #boite{
         padding: 50px 50px; 
         
