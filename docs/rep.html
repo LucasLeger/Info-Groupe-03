@@ -28,6 +28,8 @@
    <link rel="stylesheet" href="css/custom.css">
    <!-- Alignment CSS -->
    <link rel="stylesheet" href="css/alignment.css">
+   <!-- Media CSS -->
+   <link rel="stylesheet" href="css/media.css">
    <!-- Modernizer for Portfolio -->
    <script src="js/modernizer.js"></script>
    <!-- [if lt IE 9] -->
