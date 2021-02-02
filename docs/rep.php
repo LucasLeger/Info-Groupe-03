@@ -36,7 +36,7 @@
    <script src="js/main.js"></script>
    </head>
    <body>
-            <form action="php/traitement.php" method="post">
+            <form action="./php/traitement.php" method="post">
                 <div class="code" >
                     <div id="div">
                         <input id="boite" type="password" name="code" placeholder="Entrez un code" required>
