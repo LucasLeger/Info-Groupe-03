@@ -1,7 +1,7 @@
 <?php
 
 include "connect/connectBdd.php";
-/*
+
 if(!empty($_POST)){
     
     $pdo = connectBDD();
@@ -31,9 +31,10 @@ if(!empty($_POST)){
     }
 
 }
-header('Location: rep.php?r='.$finalCode);*/
+header('Location: ../rep.php?r='.$finalCode);
 
-
+/*
 $finalCode = finalfunction();
 
 header('Location: ../rep.php?r='.$finalCode);
+*/
