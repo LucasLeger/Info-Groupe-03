@@ -6,6 +6,10 @@ if(!empty($_POST)){
     
     $pdo = connectBDD();
 
+    $finalCode = "bonjour4";
+
+    header('Location: ../rep.php?r='.$finalCode);
+/*
     $maxRows = $pdo->query("SELECT 'is_in' FROM data WHERE data.is_in = 1");
     $maxRows = $maxRows->rowCount();
 
@@ -29,9 +33,10 @@ if(!empty($_POST)){
         $finalCode = $mawRows - sizeof($alreadyIn);
         $finalCode = "Il vous manque ".$finalCode." code(s)";
     }
-
+*/
 }
-header('Location: ../rep.php?r='.$finalCode);
+
+
 
 /*
 $finalCode = finalfunction();
