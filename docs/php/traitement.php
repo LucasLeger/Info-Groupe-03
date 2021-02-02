@@ -19,31 +19,16 @@ if(!empty($_POST)){
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($currentcode));
         
-        //$rowCount = $row->rowCount();
+       // $rowCount = $row->rowCount();
         if(1 != 0){
-            if(false == false){
+            if(in_array($currentcode, $alreadyIn) == false){
                 //array_push($alreadyIn, $currentcode);
                 echo $currentcode;
             }
         }
     }
 
-    
-    //header('Location: ../rep.php?r='.$finalCode);
 /*
-    $maxRows = $pdo->query("SELECT 'is_in' FROM data WHERE data.is_in = 1");
-    $maxRows = $maxRows->rowCount();
-
-    $alreadyIn = array();
-
-    foreach ($_POST as $value){
-        $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
-        $row = $rowPrepare->execute(array($value));
-        
-        if($row->rowCount() != 0 && in_array($value, $alreadyIn) == false){
-            array_push($alreadyIn, $value);
-        }
-    }
     
     $finalCode = "";
     if(sizeof($alreadyIn) == $maxRows){
