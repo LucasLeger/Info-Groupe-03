@@ -51,6 +51,6 @@
 
             
             
-            <div id="test"></div>
+            <div><?php if(isset($_GET['r'])){echo $_GET['r'];};?></div>
        
    </body>
