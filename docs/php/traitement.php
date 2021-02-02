@@ -1,8 +1,7 @@
 <?php
 
-include "connect/connectBDD.php";
+include "connect/config.php";
 
-function check($POST){
 
     $pdo = connectBDD();
 
@@ -11,7 +10,7 @@ function check($POST){
 
     $alreadyIn = array();
 
-    foreach ($POST as $value){
+    foreach ($_POST as $value){
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($value));
         
@@ -20,15 +19,15 @@ function check($POST){
         }
     }
     
-
+    $finalCode = "";
     if(sizeof($alreadyIn) == $maxRows){
         $finalCode = $pdo->query("SELECT 'data' FROM data WHERE data.is_in = 2");
         $finalCode = $finalCode->fetch();
         $finalCode = $finalCode['data'];
-
-        echo $finalCode;
+    } else {
+        $finalCode = $mawRows - sizeof($alreadyIn);
+        $finalCode = "Il vous manque ".$finalCode." code(s)";
     }
 
-}
 
-check($_POST);
+header('Location: rep.php?r='.$finalCode);
