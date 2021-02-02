@@ -11,10 +11,11 @@ if(!empty($_POST)){
     $alreadyIn = array();
 
     $finalCode = $_POST["code"];
-
+    echo sizeof($_POST);
     for($ii = 0; $ii < sizeof($_POST); $ii++){
         $currentcode = "code".$ii;
         $currentcode = $_POST[$currentcode];
+       /*
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($currentcode));
         if($row->rowCount() != 0){
@@ -22,10 +23,12 @@ if(!empty($_POST)){
                 array_push($alreadyIn, $currentcode);
             }
         }
+        */
+        echo $currentcode;
             //$finalCode++;
     }
 
-    echo $finalCode;
+    
     //header('Location: ../rep.php?r='.$finalCode);
 /*
     $maxRows = $pdo->query("SELECT 'is_in' FROM data WHERE data.is_in = 1");
