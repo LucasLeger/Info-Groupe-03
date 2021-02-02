@@ -12,10 +12,10 @@ if(!empty($_POST)){
 $finalCode = 0;
 
     foreach ($_POST as $value){
-        /*
+        
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($value));
-        
+        /*
         if($row->rowCount() != 0 && in_array($value, $alreadyIn) == false){
             array_push($alreadyIn, $value);
         }*/
