@@ -9,18 +9,21 @@ if(!empty($_POST)){
     $maxRows = $maxRows->rowCount();
 
     $alreadyIn = array();
+$finalCode = 0;
 
     foreach ($_POST as $value){
+        /*
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($value));
         
         if($row->rowCount() != 0 && in_array($value, $alreadyIn) == false){
             array_push($alreadyIn, $value);
-        }
+        }*/
+        $finalCode++;
     }
 
 
-    header('Location: ../rep.php?r='.$alreadyIn[0]);
+    header('Location: ../rep.php?r='.$finalCode);
 /*
     $maxRows = $pdo->query("SELECT 'is_in' FROM data WHERE data.is_in = 1");
     $maxRows = $maxRows->rowCount();
