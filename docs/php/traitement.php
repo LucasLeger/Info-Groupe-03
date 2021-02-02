@@ -11,6 +11,7 @@ if(!empty($_POST)){
     $alreadyIn = array();
 $finalCode = 0;
 
+    $finalCode = sizeof($_POST);
 
     foreach ($_POST as $value){
         
@@ -20,10 +21,10 @@ $finalCode = 0;
         if($row->rowCount() != 0 && in_array($value, $alreadyIn) == false){
             array_push($alreadyIn, $value);
         }*/
-        $finalCode++;
+        //$finalCode++;
     }
 
-    echo $_POST;
+    echo $finalCode;
     //header('Location: ../rep.php?r='.$finalCode);
 /*
     $maxRows = $pdo->query("SELECT 'is_in' FROM data WHERE data.is_in = 1");
