@@ -5,8 +5,8 @@ include "connect/connectBdd.php";
 if(!empty($_POST)){
     
     $pdo = connectBDD();
-    $maxRows = $pdo->query("SELECT 'is_in' FROM data WHERE data.is_in = 1");
-    $maxRows = $maxRows->rowCount();
+    $maxRows = $pdo->query("SELECT COUNT(*) FROM data WHERE data.is_in = 1");
+    $maxRows = $maxRows->fetchColumn();
 
     $alreadyIn = array();
 
@@ -15,10 +15,10 @@ if(!empty($_POST)){
         $currentcode = "code".$ii;
         $currentcode = $_POST[$currentcode];
        
-        $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
+        $rowPrepare = $pdo->prepare("SELECT COUNT(*) FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($currentcode));
         
-        $rowCount = $row->rowCount();
+        $rowCount = $row->fetchColumn();
         if($rowCount != 0){
             if(in_array($currentcode, $alreadyIn) == false){
                 array_push($alreadyIn, $currentcode);
