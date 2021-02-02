@@ -13,7 +13,8 @@ if(!empty($_POST)){
     $finalCode = $_POST["code"];
 
     for($ii = 0; $ii < sizeof($_POST); $ii++){
-        $currentcode = $_POST["code".$ii];
+        $currentcode = "code".$ii;
+        $currentcode = $_POST[$currentcode];
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($currentcode));
         if($row->rowCount() != 0){
