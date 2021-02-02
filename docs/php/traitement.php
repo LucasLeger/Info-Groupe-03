@@ -11,6 +11,7 @@ if(!empty($_POST)){
     $alreadyIn = array();
 $finalCode = 0;
 
+    echo $_POST;
     foreach ($_POST as $value){
         
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
