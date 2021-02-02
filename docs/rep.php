@@ -46,7 +46,7 @@
                 </div>
                 <div class="form">
                     <!--bouton relié au form-->
-                    <button type="submit">form</button>
+                    <button type="submit">Valider</button>
                 </div>
                 
             </form>
