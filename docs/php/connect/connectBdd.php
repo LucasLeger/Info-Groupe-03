@@ -18,5 +18,5 @@ function connectBDD() {
 };
 
 function finalfunction() {
-    return "bonjour2";
+    return "bonjour3";
 }
