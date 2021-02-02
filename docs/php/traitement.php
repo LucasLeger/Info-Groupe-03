@@ -14,7 +14,7 @@ include "connect/config.php";
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($value));
         
-        if($row->rowCount() != 0 && !array_search($value, $alreadyIn)){
+        if($row->rowCount() != 0 && in_array($value, $alreadyIn) == false){
             array_push($alreadyIn, $value);
         }
     }
