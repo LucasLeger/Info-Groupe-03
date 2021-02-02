@@ -18,7 +18,7 @@ if(!empty($_POST)){
     ;
     $finalCode = "";
     if(sizeof($alreadyIn) == sizeof($listeC)){
-        $finalCode = "syZY43Jf4";
+        $finalCode = "Le code final est => \"syZY43Jf4\" Félicitation!!!";
     } else {
         $finalCode = sizeof($listeC) - sizeof($alreadyIn);
         $finalCode = "Il vous manque ".$finalCode." code(s)";
@@ -26,3 +26,4 @@ if(!empty($_POST)){
 }
 
 header('Location: ../rep.php?r='.$finalCode);
+#S/4L#nKj$Mc6p|7f4C4
