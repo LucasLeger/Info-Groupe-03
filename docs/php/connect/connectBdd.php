@@ -15,5 +15,8 @@ function connectBDD() {
         var_dump($e->getMessage());
     }
     return $pdo;
-}
+};
 
+function finalfunction() {
+    return "bonjour2";
+}
