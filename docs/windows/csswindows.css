@@ -1,5 +1,5 @@
 body {
-  background-image: url("images/windows.png");
+  background-image: url("../images/windows.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(18, 18, 121);
@@ -14,5 +14,5 @@ p {
   font-size: 30px;
   font-weight: bold;
   border: 4mm ridge rgb(250, 250, 250);
-  padding: 5px 5px; 
+  padding: 5px 5px;
 }
