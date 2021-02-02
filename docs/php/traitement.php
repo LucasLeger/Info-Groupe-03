@@ -9,19 +9,19 @@ if(!empty($_POST)){
     $maxRows = $maxRows->rowCount();
 
     $alreadyIn = array();
-$finalCode = 0;
 
     $finalCode = $_POST["code"];
 
-    foreach ($_POST as $value){
-        
+    for($ii = 0; $ii < sizeof($_POST); $ii++){
+        $currentcode = $_POST["code".$ii];
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
-        $row = $rowPrepare->execute(array($value));
-        /*
-        if($row->rowCount() != 0 && in_array($value, $alreadyIn) == false){
-            array_push($alreadyIn, $value);
-        }*/
-        //$finalCode++;
+        $row = $rowPrepare->execute(array($currentcode));
+        if($row->rowCount() != 0){
+            if(in_array($currentcode, $alreadyIn) == false){
+                array_push($alreadyIn, $currentcode);
+            }
+        }
+            //$finalCode++;
     }
 
     echo $finalCode;
