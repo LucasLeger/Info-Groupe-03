@@ -15,9 +15,10 @@ if(!empty($_POST)){
     for($ii = 0; $ii < sizeof($_POST); $ii++){
         $currentcode = "code".$ii;
         $currentcode = $_POST[$currentcode];
-       /*
+       
         $rowPrepare = $pdo->prepare("SELECT 'is_in' FROM data WHERE data.data = ?");
         $row = $rowPrepare->execute(array($currentcode));
+        /*
         if($row->rowCount() != 0){
             if(in_array($currentcode, $alreadyIn) == false){
                 array_push($alreadyIn, $currentcode);
